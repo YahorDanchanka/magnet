@@ -1,0 +1,44 @@
+.top-nav
+  display: flex
+  align-items: center
+  color: $secondary-color
+  font-size: 1rem
+  font-weight: 500
+  gap: 13px
+  overflow-x: auto
+
+.top-nav__link
+  display: flex
+  align-items: center
+  color: inherit
+  text-decoration: none
+  font-size: 1.125em
+  margin-left: 20px
+  padding: 21px 0
+
+  &:hover
+    opacity: 0.7
+
+  &::before
+    content: ''
+    display: none
+    background: url('@/assets/images/logo.svg') no-repeat center center
+    width: 20px
+    height: 20px
+    margin-right: 4px
+
+.top-nav__link_with_logo
+  margin-left: 0
+
+  &::before
+    display: inline-block
+
+.top-nav__link_active
+  color: $primary-color
+
+  +sm-block
+    border-bottom: 1px solid $primary-color
+
+.top-nav__link_phone
+  margin-left: auto
+  min-width: max-content

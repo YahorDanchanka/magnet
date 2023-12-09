@@ -12,6 +12,9 @@ const config: webpack.Configuration = {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
+  devServer: {
+    watchFiles: ['src/**/*.html'],
+  },
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
@@ -22,17 +25,21 @@ const config: webpack.Configuration = {
   module: {
     rules: [
       {
+        test: /\.html$/i,
+        loader: 'html-loader',
+      },
+      {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/,
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader',
-        ],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
       },
     ],
   },
