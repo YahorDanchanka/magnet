@@ -1,3 +1,68 @@
-@import @/styles/components/top-nav
-@import @/styles/components/bottom-nav
+@import @/styles/components/catalog-btn
+@import @/styles/components/input
+@import @/styles/components/address-badge
+@import @/styles/components/vertical-btn
+@import @/styles/components/header-nav
 
+.header
+  display: grid
+  align-items: center
+  grid-template-columns: auto auto 1fr auto auto
+  padding: 24px 0
+
+  +md-block
+    display: flex
+    flex-wrap: wrap
+
+.header__logo
+  display: inline-block
+  margin-right: 37px
+  order: 1
+
+  +md-block
+    width: 188px
+    margin-right: 0
+    margin-bottom: 20px
+
+  +xs-block
+    width: 50%
+
+.header__catalog-btn
+  order: 2
+
+  +md-block
+    width: 135px
+    margin-right: 30px
+
+  +xs-block
+    margin-right: 10px
+
+.header__input
+  order: 3
+  margin: 0 64px
+
+  +md-block
+    margin: 0
+    width: calc(100% - 135px - 30px)
+
+  +xs-block
+    width: calc(100% - 135px - 10px)
+
+.header__address-badge
+  order: 4
+  margin-right: 25px
+
+  +md-block
+    display: none
+
+.header__nav
+  order: 5
+
+  +md-block
+    order: 1
+    width: calc(100% - 188px)
+    justify-content: flex-end
+    margin-bottom: 20px
+
+  +xs-block
+    width: 50%

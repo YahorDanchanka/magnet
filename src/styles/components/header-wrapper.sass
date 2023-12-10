@@ -1,0 +1,30 @@
+@import @/styles/components/top-nav
+@import @/styles/components/header
+@import @/styles/components/bottom-nav
+
+.header-wrapper
+  position: relative
+
+.header-wrapper__hr
+  display: block
+  border: none
+  width: 100%
+  height: 1px
+  background-color: $border-color
+  position: absolute
+
+  &:nth-child(1)
+    top: 61.3px
+
+    +md-block
+      display: none
+
+  &:nth-child(2)
+    bottom: 61.3px
+
+    +md-block
+      display: none
+
+  &:nth-child(3)
+    bottom: 0
+

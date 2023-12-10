@@ -6,9 +6,12 @@
     <title>Главная страница</title>
   </head>
   <body>
-    <header class="header">
-      <div class="container">
-        <nav class="header__top-nav top-nav">
+    <div class="header-wrapper">
+      <hr class="header-wrapper__hr" />
+      <hr class="header-wrapper__hr" />
+      <hr class="header-wrapper__hr" />
+      <div class="header-wrapper__container container">
+        <nav class="header-wrapper__top-nav top-nav">
           <a href="#" class="top-nav__link top-nav__link_with_logo top-nav__link_active">Магнит</a>
           <a href="#" class="top-nav__link top-nav__link_with_logo">Доставка</a>
           <a href="#" class="top-nav__link top-nav__link_with_logo">Косметика</a>
@@ -19,7 +22,39 @@
           </a>
           <a href="tel:+88002009002" class="top-nav__link top-nav__link_phone">8 800 200-90-02</a>
         </nav>
-        <nav class="bottom-nav">
+        <header class="header-wrapper__header header">
+          <a href="#" class="header__logo">
+            <img src="~@/assets/images/texted-logo.svg" alt="Логотип Магнита" />
+          </a>
+          <div class="header__catalog-btn">
+            <button class="catalog-btn">
+              <img src="~@/assets/images/catalog.svg" alt="Catalog icon" class="catalog-btn__icon" />
+              <span class="catalog-btn__caption">Каталог</span>
+            </button>
+          </div>
+          <div class="header__input input">
+            <img src="~@/assets/images/search.svg" alt="Search icon" class="input__icon" />
+            <input type="text" class="input__elem" placeholder="Искать продукты" />
+          </div>
+          <div class="header__address-badge address-badge">
+            <img src="~@/assets/images/logo.svg" alt="Логотип Магнита" class="address-badge__logo" />
+            <div class="address-badge__content">
+              г. Казань<br />
+              Проспект Мира, 22
+            </div>
+          </div>
+          <nav class="header__nav header-nav">
+            <a href="#" class="header-nav__link vertical-btn">
+              <img src="~@/assets/images/account.svg" alt="Account icon" class="vertical-btn__icon" />
+              <span class="vertical-btn__caption">Войти</span>
+            </a>
+            <a href="#" class="header-nav__link vertical-btn">
+              <img src="~@/assets/images/cart.svg" alt="Cart icon" class="vertical-btn__icon" />
+              <span class="vertical-btn__caption">Корзина</span>
+            </a>
+          </nav>
+        </header>
+        <nav class="header-wrapper__bottom-nav bottom-nav">
           <a href="#" class="bottom-nav__link">Акции</a>
           <a href="#" class="bottom-nav__link">Доставка</a>
           <a href="#" class="bottom-nav__link">Интернет-аптека</a>
@@ -28,7 +63,7 @@
           <a href="#" class="bottom-nav__link">Журнал</a>
         </nav>
       </div>
-    </header>
+    </div>
     <div class="main-page">
       <div class="container">
         <a class="main-page__banner-section main-page__section" href="#" style="display: block">
