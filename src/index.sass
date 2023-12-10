@@ -4,11 +4,23 @@
 @import @/styles/components/section
 @import @/styles/components/product
 
+.main-page__section
+  margin-bottom: 43px
+
+.main-page__banner-section
+  text-align: center
+  
+  +xs-block
+    margin-bottom: 20px
+
+.main-page__banner
+  +xs-block
+    height: 80px
+
 .main-page__categories
   display: grid
   grid-template-columns: repeat(5, 1fr)
   gap: 42px
-  margin-bottom: 43px
 
   +lg-block
     grid-template-columns: repeat(4, 1fr)
@@ -27,7 +39,6 @@
   display: grid
   grid-template-columns: repeat(5, 1fr)
   gap: 42px
-  margin-bottom: 43px
 
   +lg-block
     grid-template-columns: repeat(4, 1fr)
