@@ -1,11 +1,14 @@
 @import @/styles/main
 
 @import @/styles/components/category
+@import @/styles/components/section
+@import @/styles/components/product
 
 .main-page__categories
   display: grid
   grid-template-columns: repeat(5, 1fr)
   gap: 42px
+  margin-bottom: 43px
 
   +lg-block
     grid-template-columns: repeat(4, 1fr)
@@ -20,3 +23,21 @@
   +xs-block
     grid-template-columns: 1fr
 
+.main-page__products
+  display: grid
+  grid-template-columns: repeat(5, 1fr)
+  gap: 42px
+  margin-bottom: 43px
+
+  +lg-block
+    grid-template-columns: repeat(4, 1fr)
+
+  +md-block
+    gap: 20px
+    grid-template-columns: repeat(3, 1fr)
+
+  +sm-block
+    grid-template-columns: repeat(2, 1fr)
+
+  +xs-block
+    grid-template-columns: 1fr

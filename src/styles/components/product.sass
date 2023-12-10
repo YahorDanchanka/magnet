@@ -1,0 +1,68 @@
+@use 'sass:color'
+
+.product
+  font-size: 1.125rem
+  color: rgba(0, 0, 0, 0.7)
+  background-color: color.change($secondary-color, $alpha: 0.15)
+  padding: 5px 6px
+  border-radius: 20px
+  text-align: center
+  font-weight: 500
+  text-decoration: none
+
+.product__preview
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: white
+  border-radius: inherit
+  padding: 10px
+  position: relative
+  margin-bottom: 5px
+  min-height: 270px
+
+.product__discount
+  font-size: 1.5rem
+  background-color: $primary-color
+  color: white
+  font-weight: 500
+  border-bottom-left-radius: 16px
+  border-top-right-radius: 16px
+  position: absolute
+  left: 0
+  bottom: 0
+  padding: 2px 13px
+
+.product__content
+  padding: 0 8px
+  text-align: left
+  margin-bottom: 20px
+
+.product__prices
+  font-weight: 500
+
+.product__actual-price
+  color: $primary-color
+  font-size: 1.5rem
+
+.product__old-price
+  font-size: 1.25rem
+  text-decoration: line-through
+  color: $secondary-color
+
+.product__name
+  font-weight: 400
+  color: black
+
+.product__button
+  display: block
+  background-color: $primary-color
+  color: white
+  margin-left: -6px
+  margin-right: -6px
+  margin-bottom: -5px
+  padding: 11px 6px
+  border-bottom-left-radius: inherit
+  border-bottom-right-radius: inherit
+  text-decoration: none
+
