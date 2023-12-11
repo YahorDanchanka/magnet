@@ -6,6 +6,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 const config: webpack.Configuration = {
   entry: {
     index: path.resolve(__dirname, 'src/index.ts'),
+    product: path.resolve(__dirname, 'src/product.ts'),
   },
   output: {
     filename: '[name].js',
@@ -21,6 +22,11 @@ const config: webpack.Configuration = {
       template: path.resolve(__dirname, 'src/index.html'),
       chunks: ['index'],
     }),
+    new HtmlWebpackPlugin({
+      filename: 'product.html',
+      template: path.resolve(__dirname, 'src/product.html'),
+      chunks: ['product'],
+    }),
   ],
   module: {
     rules: [
@@ -32,6 +38,10 @@ const config: webpack.Configuration = {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/,
+      },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.s[ac]ss$/i,

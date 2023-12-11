@@ -1,0 +1,30 @@
+@use 'sass:color'
+
+.add-to-cart
+  border: 1px solid color.change($secondary-color, $alpha: 0.7)
+  padding: 27px
+
+.add-to-cart__prices
+  margin-bottom: 26px
+  font-weight: 600
+
+.add-to-cart__price
+  color: $primary-color
+  font-size: 2.25rem
+  margin-right: 10px
+
+.add-to-cart__old-price
+  color: $secondary-color
+  font-size: 1.5rem
+  text-decoration: line-through
+
+.add-to-cart__btn
+  width: 100%
+  padding-top: 13px
+  padding-bottom: 13px
+  font-size: 1.5rem
+  font-weight: 600
+
+  +xs-block
+    font-size: 1rem
+

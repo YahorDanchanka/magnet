@@ -1,0 +1,82 @@
+@import @/styles/components/food-nourishment
+@import @/styles/components/add-to-cart
+@import @/styles/components/product-slider
+@import @/styles/components/characteristics
+
+.single-product
+  display: flex
+  flex-wrap: wrap
+  font-size: 1.125rem
+  --gap: 65px
+
+  +md-block
+    --gap: 30px
+
+.single-product__title
+  margin-bottom: 37px
+  width: 100%
+
+.single-product__galleries, .single-product__description
+  width: calc(50% - var(--gap))
+  margin-right: var(--gap)
+
+  +sm-block
+    width: 100%
+    margin-right: 0
+
+.single-product__content, .single-product__characteristics
+  width: calc(50% - var(--gap))
+  margin-left: var(--gap)
+
+  +sm-block
+    width: 100%
+    margin-left: 0
+
+.single-product__content
+  display: flex
+  flex-wrap: wrap
+  flex-direction: column
+
+.single-product__galleries
+  margin-bottom: 80px
+
+.single-product__article-number
+  margin-bottom: 50px
+
+.single-product-article-number
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: center
+
+.single-product__food-nourishment
+  margin-bottom: 36px
+
+.single-product__add-to-cart
+  +sm-block
+    order: -1
+    margin-bottom: 40px
+
+.single-product__subtitle
+  margin-bottom: 40px
+  font-size: 1.875rem
+
+  +xs-block
+    font-size: 1.25rem
+    margin-bottom: 20px
+
+.single-product__description
+  font-size: 1.125rem
+
+  +sm-block
+    margin-bottom: 40px
+
+  +xs-block
+    margin-bottom: 30px
+
+.single-product__p
+  opacity: 0.8
+
+  +xs-block
+    font-size: 0.75rem
+    text-align: justify
