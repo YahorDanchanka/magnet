@@ -1,0 +1,18 @@
+@import @/styles/components/list
+
+.footer__lists
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: 15px
+  padding-bottom: 15px
+
+  +sm-block
+    grid-template-columns: repeat(2, 1fr)
+
+  +xs-block
+    grid-template-columns: 1fr
+
+.footer__hr
+  background: $border-color
+  border: none
+  height: 1px

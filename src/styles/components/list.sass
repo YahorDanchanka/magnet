@@ -1,0 +1,44 @@
+.list
+  font-size: 1.125rem
+  color: $secondary-color
+  list-style: none
+  padding: 0
+  margin: 0
+  font-weight: 500
+
+  +xs-block
+    font-size: 0.875rem
+
+.list__item
+  margin-bottom: 20px
+
+  +xs-block
+    margin-bottom: 10px
+
+  &:last-child
+    margin-bottom: 0
+
+.list__item-header
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+.list__toggle
+  display: none
+
+  +xs-block
+    display: block
+
+.list__link
+  color: inherit
+  text-decoration: none
+
+.list_visible .list__item:not(.list__item-header)
+  display: block
+
+.list_visible .list__toggle
+  transform: rotate(180deg)
+
++xs-block
+  .list__item:not(.list__item-header)
+    display: none
