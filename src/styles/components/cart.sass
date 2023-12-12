@@ -1,0 +1,39 @@
+@use 'sass:color'
+
+@import @/styles/components/cart-item
+
+.cart__header
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  justify-content: space-between
+
+.cart__header
+  font-size: 1.5rem
+  margin-bottom: 64px
+
+  +xs-block
+    font-size: 0.875rem
+
+.cart__title
+  margin-bottom: 16px
+
+  +xs-block
+    font-size: 1.125rem
+    margin-bottom: 10px
+
+.cart__clear-btn
+  font-weight: 500
+  font-size: 1.5rem
+  border-radius: 0.833em
+  padding: 11px 30px
+
+  +xs-block
+    font-size: 0.875rem
+    padding: 6px 21px
+
+.cart__item
+  margin-bottom: 50px
+
+  &:last-child
+    margin-bottom: 0

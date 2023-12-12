@@ -1,0 +1,100 @@
+@use 'sass:color'
+
+.cart-item
+  display: grid
+  grid-template-columns: 1fr 3fr
+  gap: 33px
+  font-size: 1.5rem
+
+  +sm-block
+    grid-template-columns: 1fr 2fr
+
+  +xs-block
+    font-size: 0.875rem
+    gap: 19px
+
+.cart-item__preview
+  display: flex
+  justify-content: center
+  align-items: center
+  background: color.change($secondary-color, $alpha: 0.15)
+  min-height: 261px
+  padding: 15px
+  border-radius: 20px
+  position: relative
+
+  +xs-block
+    min-height: auto
+
+.cart-item__discount
+  position: absolute
+  left: 0
+  bottom: 0
+  color: white
+  background-color: $primary-color
+  padding: 7px 20px
+  border-top-right-radius: 20px
+  border-bottom-left-radius: 20px
+  font-weight: 600
+
+.cart-item__content
+  font-weight: 500
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap
+
+.cart-item__title
+  font-size: inherit
+  font-weight: inherit
+  margin-bottom: 20px
+
+  +xs-block
+    margin-bottom: 6px
+
+.cart-item__cost
+  +xs-block
+    margin-bottom: 32px
+
+.cart-item__prices
+  text-align: center
+
+.cart-item__footer
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: center
+  margin-top: auto
+
+.cart-item__price
+  font-size: 2.25rem
+  color: $primary-color
+  font-weight: 600
+  text-transform: uppercase
+
+  +xs-block
+    font-size: 1.5rem
+    color: black
+
+.cart-item__old-price
+  text-decoration: line-through
+  text-transform: lowercase
+
+  +xs-block
+    display: none
+
+.cart-item__actions
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  gap: 15px
+
+.cart-item__btn
+  font-weight: 500
+  font-size: 1.5rem
+  width: 50px
+  height: 50px
+
+  +xs-block
+    width: 39px
+    height: 39px
+    font-size: 1.125rem

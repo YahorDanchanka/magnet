@@ -1,0 +1,21 @@
+@import @/styles/main
+
+@import @/styles/components/cart
+@import @/styles/components/make-order-form
+
+.cart-page
+  padding-top: 57px
+  padding-bottom: 80px
+
+.cart-page__container
+  display: grid
+  grid-template-columns: 3fr 1fr
+  gap: 56px
+
+  +md-block
+    grid-template-columns: 1fr
+
+.cart__list
+  list-style: none
+  margin: 0
+  padding: 0

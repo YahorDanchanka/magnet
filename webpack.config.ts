@@ -7,6 +7,7 @@ const config: webpack.Configuration = {
   entry: {
     index: path.resolve(__dirname, 'src/index.ts'),
     product: path.resolve(__dirname, 'src/product.ts'),
+    cart: path.resolve(__dirname, 'src/cart.ts'),
   },
   output: {
     filename: '[name].js',
@@ -26,6 +27,11 @@ const config: webpack.Configuration = {
       filename: 'product.html',
       template: path.resolve(__dirname, 'src/product.html'),
       chunks: ['product'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'cart.html',
+      template: path.resolve(__dirname, 'src/cart.html'),
+      chunks: ['cart'],
     }),
   ],
   module: {

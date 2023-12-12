@@ -1,3 +1,5 @@
+@use 'sass:color'
+
 .btn
   display: inline-block
   background-color: black
@@ -9,3 +11,7 @@
   font-family: 'Inter', sans-serif
   padding: 6px 12px
   font-size: 1rem
+
+.btn_gray
+  background: color.change($secondary-color, $alpha: 0.15)
+  color: black
