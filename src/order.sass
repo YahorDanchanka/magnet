@@ -1,0 +1,18 @@
+@import @/styles/main
+
+@import @/styles/components/order-form
+@import @/styles/components/make-order-form
+
+.order-page__container
+  display: grid
+  grid-template-columns: 3fr 1fr
+  gap: 33px
+
+  +md-block
+    grid-template-columns: 1fr
+
+.order-page__header
+  grid-column: span 2
+
+  +md-block
+    grid-column: auto

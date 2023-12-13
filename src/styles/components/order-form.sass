@@ -1,0 +1,23 @@
+.order-form
+  font-size: 1.5rem
+  font-weight: 500
+  color: $secondary-color
+
+.order-form__group
+  margin-bottom: 40px
+
+  &:last-child
+    margin-bottom: 0
+
+.order-form__addresses
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  gap: 8px
+
+  +sm-block
+    grid-template-columns: repeat(2, 1fr)
+
+.order-form__caption
+  margin-bottom: 20px
+  font-weight: 500
+  color: black
