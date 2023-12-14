@@ -8,7 +8,7 @@
 
   &.dropdown-menu_visible
     display: block
-    position: fixed
+    position: absolute
     left: 0
 
 .dropdown-menu__container
@@ -39,33 +39,18 @@
   overflow-y: auto
   height: inherit
 
-  &::-webkit-scrollbar
-    width: 5px
+  +xs-block
+    padding-right: 5px
 
-  &::-webkit-scrollbar-track
-    background-color: #e7e7e7
-    border-radius: 6px
-
-  &::-webkit-scrollbar-thumb
-    background-color: #d0d0d0
-    border-radius: 6px
+.dropdown-menu__category
+  text-decoration: none
+  color: inherit
 
 .dropdown-menu__content
   padding-top: 5px
   padding-bottom: 5px
   height: inherit
   overflow-y: auto
-
-  &::-webkit-scrollbar
-    width: 5px
-
-  &::-webkit-scrollbar-track
-    background-color: #e7e7e7
-    border-radius: 6px
-
-  &::-webkit-scrollbar-thumb
-    background-color: #d0d0d0
-    border-radius: 6px
 
   +xs-block
     display: none

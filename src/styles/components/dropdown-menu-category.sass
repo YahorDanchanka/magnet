@@ -8,11 +8,32 @@
   padding: 8px
   cursor: pointer
 
+  &_active
+    background: #f5f5f5
+
   &:hover
     background: #f5f5f5
 
   &:last-child
     margin-bottom: 0
 
+  &_header
+    display: none
+    font-weight: 700
+    font-size: 1.05em
+
+    +xs-block
+      display: block
+
+  +xs-block
+    grid-template-columns: 1fr
+    border-bottom: $border
+
+    &:last-child
+      border-bottom: none
+
 .dropdown-menu-category__img
   border-radius: 50%
+
+  +xs-block
+    display: none

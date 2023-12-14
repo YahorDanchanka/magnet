@@ -12,7 +12,9 @@ function updateDropdownPosition() {
 
   const headerHeight = header.getBoundingClientRect().height
   dropdownMenu.style.top = `${headerHeight}px`
-  dropdownMenu.style.height = `${document.documentElement.clientHeight - headerHeight}px`
+  dropdownMenu.style.height = `${
+    document.documentElement.clientHeight - headerHeight + document.documentElement.scrollTop
+  }px`
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -24,6 +26,11 @@ document.addEventListener('DOMContentLoaded', () => {
   dropdownMenuTrigger.forEach((btn) =>
     btn.addEventListener('click', () => {
       const isVisible = dropdownMenu.classList.contains('dropdown-menu_visible')
+
+      if (!isVisible) {
+        updateDropdownPosition()
+      }
+
       dropdownMenu.classList.toggle('dropdown-menu_visible')
       document.body.style.overflowY = isVisible ? 'auto' : 'hidden'
     }),
