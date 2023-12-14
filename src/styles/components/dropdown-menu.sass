@@ -1,0 +1,92 @@
+@import @/styles/components/dropdown-menu-category
+
+.dropdown-menu
+  display: none
+  font-size: 1.125rem
+  background-color: white
+  width: 100%
+
+  &.dropdown-menu_visible
+    display: block
+    position: fixed
+    left: 0
+
+.dropdown-menu__container
+  height: inherit
+  display: grid
+  grid-template-columns: 1fr 4fr
+  gap: 130px
+
+  +lg-block
+    grid-template-columns: 1fr 3fr
+    gap: 100px
+
+  +md-block
+    grid-template-columns: 1fr 2fr
+    gap: 30px
+
+  +sm-block
+    grid-template-columns: 1fr 1.5fr
+
+  +xs-block
+    grid-template-columns: 1fr
+
+
+.dropdown-menu__categories
+  list-style: none
+  margin: 0
+  padding: 0
+  overflow-y: auto
+  height: inherit
+
+  &::-webkit-scrollbar
+    width: 5px
+
+  &::-webkit-scrollbar-track
+    background-color: #e7e7e7
+    border-radius: 6px
+
+  &::-webkit-scrollbar-thumb
+    background-color: #d0d0d0
+    border-radius: 6px
+
+.dropdown-menu__content
+  padding-top: 5px
+  padding-bottom: 5px
+  height: inherit
+  overflow-y: auto
+
+  &::-webkit-scrollbar
+    width: 5px
+
+  &::-webkit-scrollbar-track
+    background-color: #e7e7e7
+    border-radius: 6px
+
+  &::-webkit-scrollbar-thumb
+    background-color: #d0d0d0
+    border-radius: 6px
+
+  +xs-block
+    display: none
+
+.dropdown-menu__title
+  font-size: 2em
+  font-weight: 600
+  margin-bottom: 87px
+
+.dropdown-menu__tags
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: 110px
+
+  +md-block
+    gap: 15px
+
+  +sm-block
+    grid-template-columns: repeat(2, 1fr)
+
+.dropdown-menu__tag
+  font-weight: 600
+  color: black
+  text-decoration: none
