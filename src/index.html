@@ -16,10 +16,17 @@
           <a href="#" class="top-nav__link top-nav__link_with_logo">Доставка</a>
           <a href="#" class="top-nav__link top-nav__link_with_logo">Косметика</a>
           <a href="#" class="top-nav__link top-nav__link_with_logo">Аптека</a>
-          <a href="#" class="top-nav__link">
-            <span style="margin-right: 8px">Ещё</span>
-            <img src="~@/assets/images/expand_more.svg" alt="Expand more icon" />
-          </a>
+          <div class="dropdown">
+            <div class="dropdown__trigger top-nav__link" style="margin-right: 20px">
+              <span style="margin-right: 8px">Ещё</span>
+              <img src="~@/assets/images/expand_more.svg" alt="Expand more icon" />
+            </div>
+            <div class="dropdown__content">
+              <a class="dropdown__link" href="#">Ссылка 1</a>
+              <a class="dropdown__link" href="#">Ссылка 2</a>
+              <a class="dropdown__link" href="#">Ссылка 3</a>
+            </div>
+          </div>
           <a href="tel:+88002009002" class="top-nav__link top-nav__link_phone">8 800 200-90-02</a>
         </nav>
         <header class="header-wrapper__header header">

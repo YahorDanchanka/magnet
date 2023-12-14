@@ -8,6 +8,7 @@
     "build": "webpack --mode=production"
   },
   "devDependencies": {
+    "@popperjs/core": "^2.11.8",
     "@types/node": "^20.10.4",
     "@types/webpack": "^5.28.5",
     "css-loader": "^6.8.1",
