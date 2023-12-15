@@ -1,5 +1,5 @@
 import { initDropdowns } from '@/scripts/dropdown'
-import { initCart } from '@/scripts/cart'
+import { findProduct, hasProduct, initCart } from '@/scripts/cart'
 
 function initList(list: HTMLUListElement) {
   const headerItem = list.firstElementChild
@@ -50,6 +50,22 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.style.overflowY = isVisible ? 'auto' : 'hidden'
     }),
   )
+
+  const makeOrderForm = document.querySelector<HTMLElement>('.make-order-form')
+
+  if (makeOrderForm) {
+    const count = makeOrderForm.querySelector('.make-order-form__product-count-field')
+    const price = makeOrderForm.querySelector('.make-order-form__product-price-field')
+    const summary = makeOrderForm.querySelector('.make-order-form__product-summary-field')
+
+    if (hasProduct('1')) {
+      count.innerHTML = `${findProduct('1').count} товар (а)`
+      price.innerHTML = `${findProduct('1').count * 375} Р`
+      summary.innerHTML = `${findProduct('1').count * 375 - 1} Р`
+    } else {
+      makeOrderForm.style.visibility = 'hidden'
+    }
+  }
 })
 
 window.addEventListener('load', () => {
