@@ -3,3 +3,21 @@
   flex-wrap: wrap
   align-items: flex-end
   gap: 18px
+
+.header-nav__link
+  position: relative
+
+.header-nav__link_badge::after
+  content: attr(data-count)
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  width: 15px
+  height: 15px
+  border-radius: 50%
+  background-color: red
+  position: absolute
+  right: -5px
+  top: -5px
+  font-size: 12px
+  color: white

@@ -1,4 +1,5 @@
 import { initDropdowns } from '@/scripts/dropdown'
+import { initCart } from '@/scripts/cart'
 
 function initList(list: HTMLUListElement) {
   const headerItem = list.firstElementChild
@@ -24,6 +25,7 @@ function updateDropdownPosition() {
 }
 
 initDropdowns()
+initCart()
 
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('ul.list').forEach((list) => initList(<HTMLUListElement>list))

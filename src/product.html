@@ -12,18 +12,25 @@
       <hr class="header-wrapper__hr" />
       <div class="header-wrapper__container container">
         <nav class="header-wrapper__top-nav top-nav">
-          <a href="#" class="top-nav__link top-nav__link_with_logo top-nav__link_active">Магнит</a>
+          <a href="index.html" class="top-nav__link top-nav__link_with_logo top-nav__link_active">Магнит</a>
           <a href="#" class="top-nav__link top-nav__link_with_logo">Доставка</a>
           <a href="#" class="top-nav__link top-nav__link_with_logo">Косметика</a>
           <a href="#" class="top-nav__link top-nav__link_with_logo">Аптека</a>
-          <a href="#" class="top-nav__link">
-            <span style="margin-right: 8px">Ещё</span>
-            <img src="~@/assets/images/expand_more.svg" alt="Expand more icon" />
-          </a>
+          <div class="dropdown">
+            <div class="dropdown__trigger top-nav__link" style="margin-right: 20px">
+              <span style="margin-right: 8px">Ещё</span>
+              <img src="~@/assets/images/expand_more.svg" alt="Expand more icon" />
+            </div>
+            <div class="dropdown__content">
+              <a class="dropdown__link" href="#">Ссылка 1</a>
+              <a class="dropdown__link" href="#">Ссылка 2</a>
+              <a class="dropdown__link" href="#">Ссылка 3</a>
+            </div>
+          </div>
           <a href="tel:+88002009002" class="top-nav__link top-nav__link_phone">8 800 200-90-02</a>
         </nav>
         <header class="header-wrapper__header header">
-          <a href="#" class="header__logo">
+          <a href="index.html" class="header__logo">
             <img src="~@/assets/images/texted-logo.svg" alt="Логотип Магнита" />
           </a>
           <div class="header__catalog-btn">
@@ -48,7 +55,7 @@
               <img src="~@/assets/images/account.svg" alt="Account icon" class="vertical-btn__icon" />
               <span class="vertical-btn__caption">Войти</span>
             </a>
-            <a href="#" class="header-nav__link vertical-btn">
+            <a href="cart.html" class="header-nav__link vertical-btn" data-count="1">
               <img src="~@/assets/images/cart.svg" alt="Cart icon" class="vertical-btn__icon" />
               <span class="vertical-btn__caption">Корзина</span>
             </a>
@@ -323,5 +330,109 @@
         </a>
       </div>
     </footer>
+
+    <div class="dropdown-menu">
+      <div class="dropdown-menu__container container">
+        <div class="dropdown-menu__categories scrollbar">
+          <a class="dropdown-menu__category dropdown-menu-category dropdown-menu-category_header" href="#">Каталог</a>
+          <a class="dropdown-menu__category dropdown-menu-category dropdown-menu-category_active" href="#">
+            <img src="~@/assets/images/category.png" alt="Подарок" class="dropdown-menu-category__img" />
+            <div class="dropdown-menu-category__name">Готовимся к Новому году</div>
+          </a>
+          <a class="dropdown-menu__category dropdown-menu-category" href="#">
+            <img
+              src="https://dostavka.magnit.ru/resize/32x32/uf/c2a/c2a8c67bac5f3e6b8771483aaaaaa011/1c05f8ab3859d108851b0badc640f5a9.png"
+              alt="Подарок"
+              class="dropdown-menu-category__img"
+            />
+            <div class="dropdown-menu-category__name">Добрый Новый год</div>
+          </a>
+          <a class="dropdown-menu__category dropdown-menu-category" href="#">
+            <img
+              src="https://dostavka.magnit.ru/resize/32x32/uf/12c/12cec2c1994cf2adc2ad601a6517ebc9/d9ed843c64c4538051928fc497f85838.png"
+              alt="Подарок"
+              class="dropdown-menu-category__img"
+            />
+            <div class="dropdown-menu-category__name">Любимые вкусы<br />Жокей</div>
+          </a>
+          <a class="dropdown-menu__category dropdown-menu-category" href="#">
+            <img
+              src="https://dostavka.magnit.ru/resize/32x32/uf/538/538310c7862331c0a00b5f71fe96afc0/6a5567b19dd6fb5fe02d79062af32546.png"
+              alt="Подарок"
+              class="dropdown-menu-category__img"
+            />
+            <div class="dropdown-menu-category__name">Новый год вкуснее с Bonduelle!</div>
+          </a>
+          <a class="dropdown-menu__category dropdown-menu-category" href="#">
+            <img src="~@/assets/images/category.png" alt="Подарок" class="dropdown-menu-category__img" />
+            <div class="dropdown-menu-category__name">Готовимся к Новому году</div>
+          </a>
+          <a class="dropdown-menu__category dropdown-menu-category" href="#">
+            <img
+              src="https://dostavka.magnit.ru/resize/32x32/uf/c2a/c2a8c67bac5f3e6b8771483aaaaaa011/1c05f8ab3859d108851b0badc640f5a9.png"
+              alt="Подарок"
+              class="dropdown-menu-category__img"
+            />
+            <div class="dropdown-menu-category__name">Добрый Новый год</div>
+          </a>
+          <a class="dropdown-menu__category dropdown-menu-category" href="#">
+            <img
+              src="https://dostavka.magnit.ru/resize/32x32/uf/12c/12cec2c1994cf2adc2ad601a6517ebc9/d9ed843c64c4538051928fc497f85838.png"
+              alt="Подарок"
+              class="dropdown-menu-category__img"
+            />
+            <div class="dropdown-menu-category__name">Любимые вкусы<br />Жокей</div>
+          </a>
+          <a class="dropdown-menu__category dropdown-menu-category" href="#">
+            <img
+              src="https://dostavka.magnit.ru/resize/32x32/uf/538/538310c7862331c0a00b5f71fe96afc0/6a5567b19dd6fb5fe02d79062af32546.png"
+              alt="Подарок"
+              class="dropdown-menu-category__img"
+            />
+            <div class="dropdown-menu-category__name">Новый год вкуснее с Bonduelle!</div>
+          </a>
+          <a class="dropdown-menu__category dropdown-menu-category" href="#">
+            <img src="~@/assets/images/category.png" alt="Подарок" class="dropdown-menu-category__img" />
+            <div class="dropdown-menu-category__name">Готовимся к Новому году</div>
+          </a>
+          <a class="dropdown-menu__category dropdown-menu-category" href="#">
+            <img
+              src="https://dostavka.magnit.ru/resize/32x32/uf/c2a/c2a8c67bac5f3e6b8771483aaaaaa011/1c05f8ab3859d108851b0badc640f5a9.png"
+              alt="Подарок"
+              class="dropdown-menu-category__img"
+            />
+            <div class="dropdown-menu-category__name">Добрый Новый год</div>
+          </a>
+          <a class="dropdown-menu__category dropdown-menu-category" href="#">
+            <img
+              src="https://dostavka.magnit.ru/resize/32x32/uf/12c/12cec2c1994cf2adc2ad601a6517ebc9/d9ed843c64c4538051928fc497f85838.png"
+              alt="Подарок"
+              class="dropdown-menu-category__img"
+            />
+            <div class="dropdown-menu-category__name">Любимые вкусы<br />Жокей</div>
+          </a>
+          <a class="dropdown-menu__category dropdown-menu-category" href="#">
+            <img
+              src="https://dostavka.magnit.ru/resize/32x32/uf/538/538310c7862331c0a00b5f71fe96afc0/6a5567b19dd6fb5fe02d79062af32546.png"
+              alt="Подарок"
+              class="dropdown-menu-category__img"
+            />
+            <div class="dropdown-menu-category__name">Новый год вкуснее с Bonduelle!1</div>
+          </a>
+        </div>
+        <div class="dropdown-menu__content scrollbar">
+          <div class="dropdown-menu__title">Готовимся к Новому году</div>
+          <nav class="dropdown-menu__tags">
+            <a class="dropdown-menu__tag" href="#">Любимые колы</a>
+            <a class="dropdown-menu__tag" href="#">Тоники</a>
+            <a class="dropdown-menu__tag" href="#">Вода, соки, нектары</a>
+            <a class="dropdown-menu__tag" href="#">Прохладительные напитки</a>
+            <a class="dropdown-menu__tag" href="#">Чипсы</a>
+            <a class="dropdown-menu__tag" href="#">Холодный чай</a>
+            <a class="dropdown-menu__tag" href="#">Сухарики</a>
+          </nav>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
