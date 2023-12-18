@@ -1,6 +1,6 @@
 import { createPopper } from '@popperjs/core'
 
-function initDropdown(elem: HTMLElement) {
+export function initDropdown(elem: HTMLElement) {
   const trigger = elem.querySelector<HTMLElement>('.dropdown__trigger')
   const content = elem.querySelector<HTMLElement>('.dropdown__content')
 
@@ -11,11 +11,5 @@ function initDropdown(elem: HTMLElement) {
   trigger.addEventListener('click', () => {
     popperInstance.update()
     elem.classList.toggle('dropdown_visible')
-  })
-}
-
-export function initDropdowns() {
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll<HTMLElement>('.dropdown').forEach((elem) => initDropdown(elem))
   })
 }

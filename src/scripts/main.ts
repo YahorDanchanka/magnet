@@ -1,15 +1,10 @@
-import { initDropdowns } from '@/scripts/dropdown'
-import { findProduct, hasProduct, initCart } from '@/scripts/cart'
+import { initDropdown } from '@/scripts/dropdown'
+import { initCart } from '@/scripts/cart'
+import { updateMakeOrderForm } from '@/scripts/make-order-form'
+import { bem } from '@/scripts/bem'
+import { initList } from '@/scripts/list'
 
-function initList(list: HTMLUListElement) {
-  const headerItem = list.firstElementChild
-
-  headerItem.addEventListener('click', () => {
-    list.classList.toggle('list_visible')
-  })
-}
-
-function updateDropdownPosition() {
+function updateDropdownMenuPosition() {
   const header = document.querySelector('.header-wrapper')
   const dropdownMenu = document.querySelector<HTMLElement>('.dropdown-menu')
 
@@ -24,12 +19,12 @@ function updateDropdownPosition() {
   }px`
 }
 
-initDropdowns()
+bem('ul.list', initList)
+bem('.dropdown', initDropdown)
+
 initCart()
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('ul.list').forEach((list) => initList(<HTMLUListElement>list))
-
   const dropdownMenu = document.querySelector<HTMLElement>('.dropdown-menu')
 
   if (!dropdownMenu) {
@@ -43,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const isVisible = dropdownMenu.classList.contains('dropdown-menu_visible')
 
       if (!isVisible) {
-        updateDropdownPosition()
+        updateDropdownMenuPosition()
       }
 
       dropdownMenu.classList.toggle('dropdown-menu_visible')
@@ -51,23 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }),
   )
 
-  const makeOrderForm = document.querySelector<HTMLElement>('.make-order-form')
-
-  if (makeOrderForm) {
-    const count = makeOrderForm.querySelector('.make-order-form__product-count-field')
-    const price = makeOrderForm.querySelector('.make-order-form__product-price-field')
-    const summary = makeOrderForm.querySelector('.make-order-form__product-summary-field')
-
-    if (hasProduct('1')) {
-      count.innerHTML = `${findProduct('1').count} товар (а)`
-      price.innerHTML = `${findProduct('1').count * 375} Р`
-      summary.innerHTML = `${findProduct('1').count * 375 - 1} Р`
-    } else {
-      makeOrderForm.style.visibility = 'hidden'
-    }
-  }
+  updateMakeOrderForm()
 })
 
 window.addEventListener('load', () => {
-  updateDropdownPosition()
+  updateDropdownMenuPosition()
 })
